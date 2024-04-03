@@ -1,0 +1,435 @@
+display: grid;
+width: 100%;
+height: 100%;
+grid-template-areas: "pic aside" "footer footer";
+grid-template-columns: 1487px auto;
+grid-template-rows: 861px 219px;
+grid-template-areas: "aside pic" "footer footer";
+grid-template-columns: 425px auto;
+grid-template-rows: 865px auto;
+background-position-x: 100%;
+background-size: cover;
+background-repeat: no-repeat;
+@@ -16,14 +16,16 @@
+}
+
+.l-frame-logo {
+    width: 432px;
+    height: 300px;
+    margin-top: 52px;
+    margin-bottom: 40px;
+    width: 341px;
+    height: 137px;
+    margin-top: 72px;
+    margin-bottom: 74px;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-image: url("./images/pmsc_logo.png");
+    background-image: url("./images/event_logo.png");
+}
+
+.l-frame-aside-title {
+@@ -45,24 +47,33 @@
+.l-frame-aside-item {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 88px;
+    height: 91px;
+    box-sizing: border-box;
+    width: 432px;
+    width: 324px;
+    margin-bottom: 7px;
+    background-image: url("./images/aside_item_bg_no_color.png");
+    /* background-image: url("./images/aside_item_bg_no_color.png"); */
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-color: #c4c4c4;
+}
+
+.l-frame-aside-item.eu {
+    background-color: #1153cc;
+}
+
+.l-frame-aside-item.af {
+    background-color: #4ea81f;
+}
+
+.l-frame-aside-item.finished{
+    background-image: url("./images/aside_item_bg_finished.png");
+    /* background-image: url("./images/aside_item_bg_finished.png"); */
+}
+
+.l-frame-aside-item.mod-next {
+    background-image: url("./images/aside_item_bg.png");
+    /* background-image: url("./images/aside_item_bg.png"); */
+    background-color: #fff;
+}
+
+.l-frame-aside-item.finished .l-frame-aside-item-data-team {
+    @@ -138,13 +149,13 @@
+}
+
+.l-frame-aside-item-map {
+    font-family: "Klapt Arabic";
+    color: #ffffff;
+    font-size: 41px;
+    height: 20px;
+    font-family: "BebasNeue";
+    font-weight: 400;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: -0.4px;
+    margin-top: -4px;
+    letter-spacing: -1.98px;
+    color: #494949;
+}
+
+.l-frame-aside-item-label-team-winner {
+    @@ -215,7 +226,7 @@
+    width: 118px;
+    font-family: "Klapt Arabic";
+    font-size: 73px;
+    color: #ffffff;
+    color: #494949;
+    text-transform: uppercase;
+    text-align: center;
+    height: 55px;
+    @@ -227,17 +238,17 @@
+}
+
+.l-frame-aside-item-time {
+    display: flex;
+    font-family: "Klapt Arabic";
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 44px;
+    text-align: right;
+    display: block;
+    font-family: "MarkProBold";
+    font-weight: 700;
+    color: #494949;
+    font-size: 17px;
+    height: 15px;
+    text-align: center;
+    position: relative;
+    padding-left: 22px;
+    padding-right: 22px;
+    text-transform: uppercase;
+    margin-top: -4px;
+    letter-spacing: -1px;
+    width: 100%;
+    box-sizing: border-box;
+}
+@@ -272,26 +283,22 @@
+
+.l-frame-footer-content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    /* justify-content: space-between; */
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.l-frame-footer-time {
+    color: #ffffff;
+    font-family: "Klapt Arabic";
+    font-weight: 500;
+    font-size: 94px;
+    color: #494949;
+    font-family: "BebasNeueBold";
+    font-weight: 400;
+    font-size: 122px;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    width: 100%;
+    line-height: 0.8;
+    letter-spacing: -3px;
+    text-align: center;
+}
+
+.l-frame-footer-time-wrapper {
+    @@ -300,76 +307,6 @@
+    width: 100%;
+}
+
+.l-frame-footer-time-decor {
+    position: absolute;
+    top: 0;
+    width: 4px;
+    height: 100%;
+}
+
+.l-frame-footer-time-decor--left {
+    left: 0;
+}
+
+.l-frame-footer-time-decor--right {
+    right: 0;
+}
+
+.l-frame-footer-text-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    max-width: 1518px;
+}
+
+.l-frame-footer-text {
+    width: 1518px;
+    color: #ffffff;
+    font-family: "Klapt Arabic";
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 80px;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    padding-left: 16px;
+    padding-right: 23px;
+    box-sizing: border-box;
+    opacity: 0.9;
+    text-align: right;
+    /* letter-spacing: -1px; */
+    white-space: nowrap;
+    margin-bottom: 3px;
+}
+
+.l-frame-footer-text-2 {
+    position: relative;
+    width: 1518px;
+    /* overflow: hidden; */
+    font-family: "Klapt Arabic";
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 62px;
+    color: #000;
+    height: 62px;
+    margin-top: 1px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+    /* margin-left: 20px; */
+    letter-spacing: 1px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.long-text {
+    right: 25px;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.l-frame-footer-flag {
+    width: 427px;
+    height: 100%;
+    @@ -387,18 +324,20 @@
+}
+
+.l-frame-match {
+    font-family: "Klapt Arabic";
+    font-size: 25px;
+    font-weight: 700;
+    font-family: "BebasNeue";
+    height: 54px;
+    font-size: 60px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: -1.98px;
+    line-height: 1;
+    text-align: center;
+}
+
+.l-frame-winner {
+    font-family: "Klapt Arabic";
+    font-size: 24px;
+    font-family: "MarkProBold";
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    @@ -423,72 +362,136 @@
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 164px;
+    width: 98px;
+    height: 91px;
+    margin-left: auto;
+    background-color: #494949;
+}
+
+.finished .l-frame-aside-item-data {
+    background-color: transparent;
+}
+
+.finished .l-frame-aside-item-data-2 {
+    max-width: 114px;
+    /* background-image: linear-gradient(to top, #ff3600 0%, rgba(255, 54, 0, 0) 100%);
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 91px;
+    height: 91px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    flex-grow: auto;
+}
+
+.mod-next .l-frame-aside-item-data-2 {
+    background-color: #ffffff;
+}
+
+.l-frame-aside-item-data-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: auto; */
+    /* width: 100%; */
+    min-width: 114px;
+    height: 88px;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+    flex-grow: 1;
+    height: 91px;
+    min-width: 91px;
+    box-sizing: border-box;
+    background-color: transparent;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.l-frame-aside-item-data-team {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Klapt Arabic";
+    font-size: 34px;
+    font-weight: 700;
+    font-family: "BebasNeue";
+    height: 54px;
+    font-size: 60px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    width: 154px;
+    width: 135px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    letter-spacing: -1.98px;
+}
+
+.l-frame-timer {
+    height: 150px;
+    width: 302px;
+    height: 88px;
+    width: 500px;
+    padding: 0px 0px;
+    margin-left: 12px;
+    margin-right: 43px;
+    margin-top: 20px;
+    margin-top: -5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    /* padding-bottom: 34px; */
+    text-align: center;
+    color: #494949;
+}
+
+.l-frame-timer-txt {
+    font-size: 49px;
+    font-family: "Klapt Arabic";
+    position: relative;
+    font-size: 122px;
+    font-family: "BebasNeueBold";
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0.9;
+    color: #fff;
+    color: #494949;
+    text-align: center;
+    padding-right: 68px;
+    letter-spacing: -3px;
+}
+
+.l-frame-timer-txt:after {
+    content: "";
+    position: absolute;
+    right: 26px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #494949;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.region-counter {
+    height: 116px;
+    width: 534px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "BebasNeue";
+    font-size: 122px;
+    font-weight: 400;
+    color: #ffffff;
+    box-sizing: border-box;
+    padding: 0 18px;
+    letter-spacing: 1.4px;
+}
+
+.region-counter#eu {
+    background-color: #1153cc;
+}
+
+.region-counter#af {
+    background-color: #4ea81f;
+}
+
+.region-counter-points {
+    background-color: #fff;
+    width: 192px;
+    height: 116px;
+    text-align: center;
+    margin-bottom: 6px;
+    letter-spacing: 1.58px;
+}
+
+#eu .region-counter-points {
+    color: #1153cc;
+}
+
+#af .region-counter-points {
+    color: #4ea81f;
+}
+
+.next {
