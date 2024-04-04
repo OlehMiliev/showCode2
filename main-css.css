@@ -433,3 +433,42 @@ background-repeat: no-repeat;
 }
 
 .next {
+    background-image: url("./images/l-frame-item-next.png");
+}
+#replay_item {
+    position: absolute;
+    min-width: 205px;
+    height: 59px;
+    top: 242px;
+    right: 46px;
+    text-align: center;
+    font-family: "Klapt Arabic";
+    font-weight: 700;
+    font-size: 33px;
+    color: #fff;
+    font-weight: 700;
+    /* line-height: 85px; */
+    text-transform: uppercase;
+    /* background-image: url("./images/pcs6/replay_highlights.png"); */
+    background-position: 0 0;
+    background-size: 264px 74px;
+    background-repeat: no-repeat;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/replay_lframe.png");
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.sub_logo {
+    position: absolute;
+    left: 80px;
+    top: 10px;
+    width: 172px;
+    height: 172px;
+    background-image: url("./images/kfc.png");
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}

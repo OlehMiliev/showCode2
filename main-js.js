@@ -80,7 +80,7 @@ if(data.replay == "replay") {
                                     thisBlock.find("#schedule_row-" + (i + 1)).addClass("finished");
                                     thisBlock
                                         .find("#schedule_row-" + (i + 1))
-                                @@ -81,14 +78,14 @@ function setData(data, thisBlock) {
+                               function setData(data, thisBlock) {
                                 .html(translate("winner"));
                                     if (arr[i].winner.short_name.length >= 6) {
                                         thisBlock
@@ -122,3 +122,60 @@ if(data.replay == "replay") {
                                 }
                                 try {
                                         thisBlock
+                                            .find("#schedule_row-" + (i + 1))
+                                            .find(".l-frame-aside-item-team")
+                                            .html(arr[i].map.name.toUpperCase());
+                                    } catch (error) {}
+                                }
+                                } else {
+                                    thisBlock.find("#schedule_row-" + (i + 1)).css("display", "none");
+                                }
+                            }
+                            function leadingZero(a) {
+                                if (a.toString().length < 2) {
+                                    a = "0" + a;
+                                }
+                                return a;
+                            }
+                            var flagRun;
+                            let date = new Date();
+                            let finishTimeArray = data.txtTime.split(":");
+                            var finishTime = Date.parse(date) + finishTimeArray[0] * 60000;
+                            finishTime = finishTime + finishTimeArray[1] * 1000;
+                            if (finishTime - date > 0) {
+                                let tM = Math.floor(((finishTime - Date.parse(date)) / 1000 / 60) % 60);
+                                let tS = Math.floor(((finishTime - Date.parse(date)) / 1000) % 60);
+                                thisBlock
+                                    .find(".l-frame-footer-time ")
+                                    .html(leadingZero(tM) + ":" + leadingZero(tS));
+                                flagRun = true;
+                                timerId = setInterval(fs_timer_onTimer, 1000);
+                            } else {
+                                if (flagRun == true) {
+                                    flagRun = false;
+                                }
+                                thisBlock.find(".l-frame-footer-time").html("");
+                            }
+                            function fs_timer_onTimer() {
+                                let date = new Date();
+                                if (finishTime - date > 0) {
+                                    let tM = Math.floor(((finishTime - Date.parse(date)) / 1000 / 60) % 60);
+                                    let tS = Math.floor(((finishTime - Date.parse(date)) / 1000) % 60);
+                                    thisBlock
+                                        .find(".l-frame-footer-time ")
+                                        .html(leadingZero(tM) + ":" + leadingZero(tS));
+                                } else {
+                                    if (flagRun == true) {
+                                        clearInterval(timerId);
+                                        flagRun = false;
+                                    }
+                                    thisBlock.find(".l-frame-footer-time").html("");
+                                }
+                            }
+                        }
+                        function updateData(thisBlock) {
+                            console.log("Nothing to update");
+                        }
+                        function outAnimation(thisBlock) {
+                            console.log("No out animation");
+                        }
